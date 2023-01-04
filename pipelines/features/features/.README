@@ -1,1 +1,40 @@
+source ~/.venvs/age_pred/bin/activate
 
+cd /data/project/age_prediction/codes/tools
+
+
+# CamCAN
+python src/extract_parcels_camcan.py -data_folder /data/project/age_prediction/results/datasets/camcan -pipeline ants_icbm -extras /data/project/age_prediction/extras -output_name features_camcan_ants_icbm_BSF.csv
+python src/extract_parcels_camcan.py -data_folder /data/project/age_prediction/results/datasets/camcan -pipeline ants_data_tmplt -extras /data/project/age_prediction/extras -output_name features_camcan_ants_data_tmplt_BSF.csv
+python src/extract_parcels_camcan.py -data_folder /data/project/age_prediction/results/datasets/camcan -pipeline cat12.8_1mm_template -extras /data/project/age_prediction/extras -output_name features_camcan_cat_BSF.csv
+python src/extract_parcels_camcan.py -data_folder /data/project/age_prediction/results/datasets/camcan -pipeline cat12.8_1mm -extras /data/project/age_prediction/extras -output_name features_camcan_cat_icbm_BSF.csv
+python src/extract_parcels_camcan.py -data_folder /data/project/age_prediction/results/datasets/camcan -pipeline fslvbm -extras /data/project/age_prediction/extras -output_name features_camcan_fslvbm_data_tmplt_BSF.csv
+python src/extract_parcels_camcan.py -data_folder /data/project/age_prediction/results/datasets/camcan -pipeline fslvbm1_3 -extras /data/project/age_prediction/extras -output_name features_camcan_fslvbm1_3_BSF.csv
+python src/extract_parcels_camcan.py -data_folder /data/project/age_prediction/results/datasets/camcan -pipeline fmriprep1_fslvbm23 -extras /data/project/age_prediction/extras -output_name features_camcan_fmriprep1_fslvbm23_BSF.csv
+python src/extract_parcels_camcan.py -data_folder /data/project/age_prediction/results/datasets/camcan -pipeline fmriprep_fsl_3 -extras /data/project/age_prediction/extras -output_name features_camcan_fmriprep_fsl_3_BSF.csv
+python src/extract_parcels_camcan.py -data_folder /data/project/age_prediction/results/datasets/camcan -pipeline ants_fslvbm3 -extras /data/project/age_prediction/extras -output_name features_camcan_ants_fslvbm3_BSF.csv
+python src/extract_parcels_camcan.py -data_folder /data/project/age_prediction/results/datasets/camcan -pipeline ants_fslvbm -extras /data/project/age_prediction/extras -output_name features_camcan_ants_fslvbm23_BSF.csv
+
+# eNKI 
+python src/extract_parcels_enki.py -data_folder /data/project/age_prediction/results/datasets/enki -pipeline ants_icbm -extras /data/project/age_prediction/extras -output_name features_enki_ants_icbm_BSF.csv
+python src/extract_parcels_enki.py -data_folder /data/project/age_prediction/results/datasets/enki -pipeline ants_data_tmplt -extras /data/project/age_prediction/extras -output_name features_enki_ants_data_tmplt_BSF.csv
+python src/extract_parcels_enki.py -data_folder /data/project/age_prediction/results/datasets/enki -pipeline cat12.8_1mm -extras /data/project/age_prediction/extras -output_name features_enki_cat_icbm_BSF.csv
+python src/extract_parcels_enki.py -data_folder /data/project/age_prediction/results/datasets/enki -pipeline cat12.8_1mm_template -extras /data/project/age_prediction/extras -output_name features_enki_cat_data_tmplt_BSF.csv
+python src/extract_parcels_enki.py -data_folder /data/project/age_prediction/results/datasets/enki -pipeline fslvbm -extras /data/project/age_prediction/extras -output_name features_enki_fslvbm_BSF.csv
+python src/extract_parcels_enki.py -data_folder /data/project/age_prediction/results/datasets/enki -pipeline fslvbm1_3 -extras /data/project/age_prediction/extras -output_name features_enki_fslvbm1_3_BSF.csv
+python src/extract_parcels_enki.py -data_folder /data/project/age_prediction/results/datasets/enki -pipeline fmriprep1_fslvbm23 -extras /data/project/age_prediction/extras -output_name features_enki_fmriprep1_fslvbm23_BSF.csv
+python src/extract_parcels_enki.py -data_folder /data/project/age_prediction/results/datasets/enki -pipeline fmriprep_fsl_3 -extras /data/project/age_prediction/extras -output_name features_enki_fmriprep_fsl_3_BSF.csv
+python src/extract_parcels_enki.py -data_folder /data/project/age_prediction/results/datasets/enki -pipeline ants_fslvbm3 -extras /data/project/age_prediction/extras -output_name features_enki_ants_fslvbm3_BSF.csv
+python src/extract_parcels_enki.py -data_folder /data/project/age_prediction/results/datasets/enki -pipeline ants_fslvbm -extras /data/project/age_prediction/extras -output_name features_enki_ants_fslvbm23_BSF.csv
+
+# IXI
+python src/extract_parcels_IXI.py -data_folder /data/project/age_prediction/results/datasets/ixi -pipeline ants_icbm -extras /data/project/age_prediction/extras -output_name features_ixi_ants_icbm_BSF.csv
+python src/extract_parcels_IXI.py -data_folder /data/project/age_prediction/results/datasets/ixi -pipeline ants_data_tmplt -extras /data/project/age_prediction/extras -output_name features_ixi_ants_data_tmplt_BSF.csv
+python src/extract_parcels_IXI.py -data_folder /data/project/age_prediction/results/datasets/ixi -pipeline cat12.8_1mm_template -extras /data/project/age_prediction/extras -output_name features_ixi_cat_BSF.csv
+python src/extract_parcels_IXI.py -data_folder /data/project/age_prediction/results/datasets/ixi -pipeline cat12.8_1mm -extras /data/project/age_prediction/extras -output_name features_ixi_cat_icbm_BSF.csv
+python src/extract_parcels_IXI.py -data_folder /data/project/age_prediction/results/datasets/ixi -pipeline fslvbm -extras /data/project/age_prediction/extras -output_name features_ixi_fslvbm_BSF.csv
+python src/extract_parcels_IXI.py -data_folder /data/project/age_prediction/results/datasets/ixi -pipeline fslvbm1_3 -extras /data/project/age_prediction/extras -output_name features_ixi_fslvbm1_3_BSF.csv
+python src/extract_parcels_IXI.py -data_folder /data/project/age_prediction/results/datasets/ixi -pipeline fmriprep1_fslvbm23 -extras /data/project/age_prediction/extras -output_name features_ixi_fmriprep1_fslvbm23_BSF.csv
+python src/extract_parcels_IXI.py -data_folder /data/project/age_prediction/results/datasets/ixi -pipeline fmriprep_fsl_3 -extras /data/project/age_prediction/extras -output_name features_ixi_fmriprep_fsl_3_BSF.csv
+python src/extract_parcels_IXI.py -data_folder /data/project/age_prediction/results/datasets/ixi -pipeline ants_fslvbm3 -extras /data/project/age_prediction/extras -output_name features_ixi_ants_fslvbm3_BSF.csv
+python src/extract_parcels_IXI.py -data_folder /data/project/age_prediction/results/datasets/ixi -pipeline ants_fslvbm -extras /data/project/age_prediction/extras -output_name features_ixi_ants_fslvbm23_BSF.csv

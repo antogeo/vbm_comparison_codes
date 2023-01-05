@@ -2,23 +2,16 @@
 
 import pandas as pd
 import os.path as op
-from scipy.stats import pearsonr, spearmanr
-from glob import glob
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
-import constants as con
-import nibabel as nib
-import mat_to_nii
 import seaborn as sns
-from sklearn.model_selection import (train_test_split, RepeatedStratifiedKFold,
-                                     cross_val_predict, cross_validate)
+from sklearn.model_selection import RepeatedStratifiedKFold
 from sklearn.metrics import confusion_matrix
-from sklearn.preprocessing import StandardScaler, Normalizer, MinMaxScaler
+from sklearn.preprocessing import StandardScaler
 from sklearn import svm
-from src.get_data import get_dataframes
+from lib.get_data import get_dataframes
 from julearn import run_cross_validation
-from sklearn.multiclass import OneVsRestClassifier, OneVsOneClassifier
 from pprint import pprint
 from functools import reduce
 %matplotlib

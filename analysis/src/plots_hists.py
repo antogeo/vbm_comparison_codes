@@ -8,7 +8,7 @@ from scipy.stats import pearsonr, spearmanr
 from glob import glob
 import numpy as np
 import matplotlib.pyplot as plt
-import constants as con
+import lib.constants as con
 import matplotlib
 from src.get_data import get_dataframes
 %matplotlib

@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 import scipy.stats as stats
 import constants as con
 import nibabel as nib
-import mat_to_nii
+from src import mat_to_nii
 import matplotlib
 import seaborn as sns
 import statsmodels.api as sm

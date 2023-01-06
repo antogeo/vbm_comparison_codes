@@ -12,7 +12,7 @@ from glob import glob
 import numpy as np
 import matplotlib.pyplot as plt
 import scipy.stats as stats
-import constants as con
+import lib.constants as con
 import nibabel as nib
 from lib import mat_to_nii
 import matplotlib

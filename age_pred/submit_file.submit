@@ -1,0 +1,144 @@
+# The environment
+universe       = vanilla
+getenv         = True
+request_cpus   = 1
+request_memory = 10G
+
+# Execution
+initial_dir    = /data/project/age_prediction/prediction/codes
+executable     = brainage_prediction.py
+
+# Logs
+log            = /data/project/age_prediction/prediction/logs/$(Cluster).$(Process).log
+output         = /data/project/age_prediction/prediction/logs/$(Cluster).$(Process).out
+error          = /data/project/age_prediction/prediction/logs/$(Cluster).$(Process).err
+
+
+# CAMCAN analysis
+
+data_dir = /data/project/age_prediction/prediction/features_new
+
+# Job 1
+arguments = $(data_dir)/camcan/features_camcan_fslvbm1_3_BSF.csv $(data_dir)/camcan/cc_common_subj.csv camcan/camcan_fslvbm1_3_BSF
+Queue
+
+# Job 2
+arguments = $(data_dir)/camcan/features_camcan_fslvbm_data_BSF.csv $(data_dir)/camcan/cc_common_subj.csv camcan/camcan_fslvbm_data_BSF
+Queue
+
+# Job 3
+arguments = $(data_dir)/camcan/features_camcan_fmriprep1_fslvbm23_BSF.csv $(data_dir)/camcan/cc_common_subj.csv camcan/camcan_fmriprep1_fslvbm23_BSF
+Queue
+
+# Job 4
+arguments = $(data_dir)/camcan/features_camcan_fmriprep_fsl_3_BSF.csv $(data_dir)/camcan/cc_common_subj.csv camcan/camcan_fmriprep_fsl_3_BSF
+Queue
+
+# Job 5
+arguments = $(data_dir)/camcan/features_camcan_cat_icbm_BSF.csv $(data_dir)/camcan/cc_common_subj.csv camcan/camcan_cat_icbm_BSF
+Queue
+
+# Job 6
+arguments = $(data_dir)/camcan/features_camcan_cat_data_BSF.csv $(data_dir)/camcan/cc_common_subj.csv camcan/camcan_cat_data_BSF
+Queue
+
+# Job 7
+arguments = $(data_dir)/camcan/features_camcan_ants_icbm_BSF.csv $(data_dir)/camcan/cc_common_subj.csv camcan/camcan_ants_icbm_BSF
+Queue
+
+# Job 8
+arguments = $(data_dir)/camcan/features_camcan_ants_fslvbm23_BSF.csv $(data_dir)/camcan/cc_common_subj.csv camcan/camcan_ants_fslvbm23_BSF
+Queue
+
+# Job 9
+arguments = $(data_dir)/camcan/features_camcan_ants_fslvbm3_BSF.csv $(data_dir)/camcan/cc_common_subj.csv camcan/camcan_ants_fslvbm3_BSF
+Queue
+
+# Job 10
+arguments = $(data_dir)/camcan/features_camcan_ants_data_BSF.csv $(data_dir)/camcan/cc_common_subj.csv camcan/camcan_ants_data_BSF
+Queue
+
+# IXI analysis
+
+# Job 1
+arguments = $(data_dir)/ixi/features_ixi_fslvbm1_3_BSF.csv $(data_dir)/ixi/ixi_common_subj.csv ixi/ixi_fslvbm1_3_BSF
+Queue
+
+# Job 2
+arguments = $(data_dir)/ixi/features_ixi_fslvbm_data_BSF.csv $(data_dir)/ixi/ixi_common_subj.csv ixi/ixi_fslvbm_data_BSF
+Queue
+
+# Job 3
+arguments = $(data_dir)/ixi/features_ixi_fmriprep1_fslvbm23_BSF.csv $(data_dir)/ixi/ixi_common_subj.csv ixi/ixi_fmriprep1_fslvbm23_BSF
+Queue
+
+# Job 4
+arguments = $(data_dir)/ixi/features_ixi_fmriprep_fsl_3_BSF.csv $(data_dir)/ixi/ixi_common_subj.csv ixi/ixi_fmriprep_fsl_3_BSF
+Queue
+
+# Job 5
+arguments = $(data_dir)/ixi/features_ixi_cat_icbm_BSF.csv $(data_dir)/ixi/ixi_common_subj.csv ixi/ixi_cat_icbm_BSF
+Queue
+
+# Job 6
+arguments = $(data_dir)/ixi/features_ixi_cat_data_BSF.csv $(data_dir)/ixi/ixi_common_subj.csv ixi/ixi_cat_data_BSF
+Queue
+
+# Job 7
+arguments = $(data_dir)/ixi/features_ixi_ants_icbm_BSF.csv $(data_dir)/ixi/ixi_common_subj.csv ixi/ixi_ants_icbm_BSF
+Queue
+
+# Job 8
+arguments = $(data_dir)/ixi/features_ixi_ants_fslvbm23_BSF.csv $(data_dir)/ixi/ixi_common_subj.csv ixi/ixi_ants_fslvbm23_BSF
+Queue
+
+# Job 9
+arguments = $(data_dir)/ixi/features_ixi_ants_fslvbm3_BSF.csv $(data_dir)/ixi/ixi_common_subj.csv ixi/ixi_ants_fslvbm3_BSF
+Queue
+
+# Job 10
+arguments = $(data_dir)/ixi/features_ixi_ants_data_BSF.csv $(data_dir)/ixi/ixi_common_subj.csv ixi/ixi_ants_data_BSF
+Queue
+
+
+# eNKI analysis
+
+# Job 1
+arguments = $(data_dir)/enki/features_enki_fslvbm1_3_BSF.csv $(data_dir)/enki/enki_common_subj.csv enki/enki_fslvbm1_3_BSF
+Queue
+
+# Job 2
+arguments = $(data_dir)/enki/features_enki_fslvbm_data_BSF.csv  $(data_dir)/enki/enki_common_subj.csv enki/enki_fslvbm_data_BSF
+Queue
+
+# Job 3
+arguments = $(data_dir)/enki/features_enki_fmriprep1_fslvbm23_BSF.csv $(data_dir)/enki/enki_common_subj.csv enki/enki_fmriprep1_fslvbm23_BSF
+Queue
+
+# Job 4
+arguments = $(data_dir)/enki/features_enki_fmriprep_fsl_3_BSF.csv $(data_dir)/enki/enki_common_subj.csv enki/enki_fmriprep_fsl_3_BSF
+Queue
+
+# Job 5
+arguments = $(data_dir)/enki/features_enki_cat_icbm_BSF.csv $(data_dir)/enki/enki_common_subj.csv enki/enki_cat_icbm_BSF
+Queue
+
+# Job 6
+arguments = $(data_dir)/enki/features_enki_cat_data_BSF.csv $(data_dir)/enki/enki_common_subj.csv enki/enki_cat_data_BSF
+Queue
+
+# Job 7
+arguments = $(data_dir)/enki/features_enki_ants_icbm_BSF.csv $(data_dir)/enki/enki_common_subj.csv enki/enki_ants_icbm_BSF
+Queue
+
+# Job 8
+arguments = $(data_dir)/enki/features_enki_ants_fslvbm23_BSF.csv $(data_dir)/enki/enki_common_subj.csv enki/enki_ants_fslvbm23_BSF
+Queue
+
+# Job 9
+arguments = $(data_dir)/enki/features_enki_ants_fslvbm3_BSF.csv $(data_dir)/enki/enki_common_subj.csv enki/enki_ants_fslvbm3_BSF
+Queue
+
+# Job 10
+arguments = $(data_dir)/enki/features_enki_ants_data_BSF.csv $(data_dir)/enki/enki_common_subj.csv enki/enki_ants_data_BSF
+Queue
